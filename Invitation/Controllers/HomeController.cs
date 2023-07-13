@@ -5,5 +5,8 @@ namespace Invitation.Controllers;
 public class HomeController : Controller
 {
   public ViewResult Index()
-    => View("Index", "Hello there");
+    => View();
+
+  public ViewResult Form()
+    => View();
 }

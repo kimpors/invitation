@@ -1,0 +1,30 @@
+@model Invite
+
+<article>
+  <form asp-action="Form" method="post">
+    <p>
+      <label asp-for="Name"></label>
+      <input asp-for="Name">
+    </p>
+    <p>
+      <label asp-for="LastName"></label>
+      <input asp-for="LastName">
+    </p>
+    <p>
+      <label asp-for="Phone"></label>
+      <input asp-for="Phone">
+    </p>
+    <p>
+      <label asp-for="Email"></label>
+      <input asp-for="Email">
+    </p>
+    <p>
+      <select asp-for="IsComeUp">
+        <option value="true">Yes, i'll come up</option>
+        <option value="false">No, i'm busy</option>
+      </select>
+    </p>
+    
+    <input type="submit" value="Submit">
+  </form>
+</article>
