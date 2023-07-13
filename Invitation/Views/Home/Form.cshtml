@@ -1,28 +1,31 @@
 @model Invite
 
 <article>
-  <form asp-action="Form" method="post">
+  <form asp-controller="Home" asp-action="Form" method="post">
     <p>
       <label asp-for="Name"></label>
+      <div><span asp-validation-for="Name"></span></div>
       <input asp-for="Name">
     </p>
     <p>
       <label asp-for="LastName"></label>
+      <div><span asp-validation-for="LastName"></span></div>
       <input asp-for="LastName">
     </p>
     <p>
       <label asp-for="Phone"></label>
+      <div><span asp-validation-for="Phone"></span></div>
       <input asp-for="Phone">
     </p>
     <p>
       <label asp-for="Email"></label>
+      <div><span asp-validation-for="Email"></span></div>
       <input asp-for="Email">
     </p>
     <p>
-      <select asp-for="IsComeUp">
-        <option value="true">Yes, i'll come up</option>
-        <option value="false">No, i'm busy</option>
-      </select>
+      <label>
+        <input asp-for="IsComeUp"> Do you Come ?
+      </label>
     </p>
     
     <input type="submit" value="Submit">
