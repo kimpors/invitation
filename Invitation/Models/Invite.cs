@@ -4,6 +4,8 @@ namespace Invitation.Models;
 
 public class Invite
 {
+  public int Id { get; set; }
+
   [Required(ErrorMessage = "Please, enter the name")]
   public string Name { get; set; }
 
