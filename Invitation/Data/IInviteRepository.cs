@@ -2,7 +2,7 @@ using Invitation.Models;
 
 namespace Invitation.Data;
 
-interface IInviteRepository
+public interface IInviteRepository
 {
   public IQueryable<Invite> Invites { get; }
 }

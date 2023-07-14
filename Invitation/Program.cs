@@ -9,6 +9,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
   options.UseMySql(invite, ServerVersion.AutoDetect(invite));
 });
+builder.Services.AddTransient<IInviteRepository, EFInviteRepository>();
 
 builder.Services.AddControllersWithViews();
 

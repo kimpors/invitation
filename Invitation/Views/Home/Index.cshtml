@@ -1,11 +1,40 @@
+@model IEnumerable<Invite>
+
 <article>
   <h1>Invitation</h1>
 
-  <p>
-    Do you want come up ?
-    <br>
-    Then go by this ref.
-  </p>
+  <section>
+    <p>
+      Do you want come up ?
+      <br>
+      Then go by this ref.
+    </p>
 
-  <a asp-action="Form">Here</a>
+    <a asp-action="Form">Here</a>
+  </section>
+  <section>
+    <p>Look how much be people!</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>LastName</th>
+          <th>Phone</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach (Invite u in Model)
+        {
+          <tr>
+            <td>@u.Name</td>
+            <td>@u.LastName</td>
+            <td>@u.Phone</td>
+            <td>@u.Email</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </section>
 </article>
