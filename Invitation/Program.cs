@@ -1,4 +1,14 @@
+using Invitation.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+string invite = builder.Configuration.GetConnectionString("Invite");
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+  options.UseMySql(invite, ServerVersion.AutoDetect(invite));
+});
 
 builder.Services.AddControllersWithViews();
 
