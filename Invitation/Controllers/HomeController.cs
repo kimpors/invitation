@@ -23,6 +23,7 @@ public class HomeController : Controller
   {
     if (ModelState.IsValid)
     {
+      _repo.SaveInvite(invite);
       return View(nameof(Thanks), invite.IsComeUp);
     }
 
