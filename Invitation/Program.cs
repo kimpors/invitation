@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-string invite = builder.Configuration.GetConnectionString("Invite");
+string invite = builder.Configuration.GetConnectionString("Invite") ?? "Error";
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
@@ -11,6 +11,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 builder.Services.AddTransient<IInviteRepository, EFInviteRepository>();
 
+builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

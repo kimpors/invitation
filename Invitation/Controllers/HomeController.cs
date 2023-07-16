@@ -16,7 +16,11 @@ public class HomeController : Controller
     => View(_repo.Invites.Where(u => u.IsComeUp));
 
   public ViewResult Form()
-    => View(new Invite());
+    => View(new Invite(){
+        Name = "",
+        LastName = "",
+        Email = "",
+        Phone = ""});
 
   [HttpPost]
   public IActionResult Form(Invite invite)
