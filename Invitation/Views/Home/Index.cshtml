@@ -1,21 +1,21 @@
 @model IEnumerable<Invite>
 
-<article>
+<article class="center">
   <h1>Invitation</h1>
 
-  <section>
+  <section class="center border">
     <p>
       Do you want come up ?
       <br>
       Then go by this ref.
     </p>
 
-    <a asp-action="Form">Here</a>
+    <a class="link" asp-action="Form">Here</a>
   </section>
-  <section>
-    <p>Look how much be people!</p>
+  <section class="center border guest-list">
+    <p>Look how much people come up!</p>
 
-    <table>
+    <table class="table">
       <thead>
         <tr>
           <th>Name</th>

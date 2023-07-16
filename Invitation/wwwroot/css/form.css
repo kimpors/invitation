@@ -1,0 +1,47 @@
+.form
+{
+  margin: 0;
+}
+
+.form .field
+{
+  margin-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  padding: .8rem;
+}
+
+.form .field label
+{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.form .field input
+{
+  font-size: 1rem;
+  border-style: none;
+  margin-top: .5rem;
+  padding: .4rem;
+  border: 1px solid black;
+}
+
+.form .is-come 
+{
+  height: 25px;
+}
+
+.form .submit {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.invalid
+{
+  color: red;
+  font-weight: bold;
+
+}

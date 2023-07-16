@@ -1,6 +1,6 @@
 @model bool
 
-<article>
+<article class="center thanks">
   <h1>Thank you</h1>
   @if (Model)
   {
@@ -14,4 +14,6 @@
       Bad, but next time you need to come up!!!
     </p>
   }
+
+  <a class="link" asp-action="Index">Return</a>
 </article>
