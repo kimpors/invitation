@@ -1,21 +1,29 @@
 @model IEnumerable<Invite>
 
-<article class="center">
-  <h1>Invitation</h1>
-
-  <section class="center border">
+<article>
+  <section class="info">
+  <h2>Invitation</h2>
     <p>
-      Do you want come up ?
-      <br>
-      Then go by this ref.
+      If you on this page, that's means you get invitate!
+      We invite you to our party, if you interested share       contact data with us.
     </p>
-
-    <a class="link" asp-action="Form">Here</a>
+    
   </section>
-  <section class="center border guest-list">
-    <p>Look how much people come up!</p>
+  <section class="invitation">
+    <p>Do you want come up ?</p>
 
-    <table class="table">
+    <a asp-action="Form">Yes, I do</a>
+  </section>
+  <section class="guest-info">
+    <h2>Guests</h2>
+
+    <p>
+      This table of all of guest that's be on party.
+    </p>
+  </section>
+  <section class="table">
+
+    <table>
       <thead>
         <tr>
           <th>Name</th>
@@ -28,10 +36,10 @@
         @foreach (Invite u in Model)
         {
           <tr>
-            <td>@u.Name</td>
-            <td>@u.LastName</td>
-            <td>@u.Phone</td>
-            <td>@u.Email</td>
+            <td data-cell="name">@u.Name</td>
+            <td data-cell="lastname">@u.LastName</td>
+            <td data-cell="phone">@u.Phone</td>
+            <td data-cell="email">@u.Email</td>
           </tr>
         }
       </tbody>
