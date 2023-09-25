@@ -15,12 +15,13 @@ form
   align-items: center;
 }
 
-section
+.form section
 {
   background-color: var(--primary);
   padding: 1rem;
   margin-bottom: 1rem;
   box-shadow: 5px 5px var(--secondary);
+  /* margin: .3rem; */
 }
 
 section input

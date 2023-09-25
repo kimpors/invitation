@@ -3,6 +3,7 @@
   --text: black;
   --background: hsl(200, 50%, 90%);
 
+  --primary: hsl(200, 70%, 80%);
   --secondary: hsl(10, 20%, 30%);
   --accent: hsl(200, 50%, 90%);
 
@@ -40,7 +41,10 @@ article
 }
 
 section{
+  background-color: var(--primary);
+  box-shadow: 5px 5px var(--secondary);
   border-radius: 10px;
+  margin: .2rem;
 }
 
 .info
@@ -67,7 +71,7 @@ section{
 
 .table
 {
-
+  overflow-y: scroll;
   background-color: var(--guests);
   grid-row: 2 / 5;
   grid-column: 2 / 5;
@@ -96,22 +100,31 @@ a
   padding-block-end: 1rem;
 }
 
-.table
-{
-  overflow-y: scroll;
-}
-
 table
 {
   width: 100%;
   padding: 1rem;
+  border-collapse: collapse;
 }
 
-tbody 
+th
 {
-  border: solid black 1px;
+  text-align: left;
+  background-color: var(--primary);
 }
 
+th,
+td
+{
+  padding-inline: .3rem;
+  padding-block: .5rem;
+}
+
+td
+{
+  border: 2px solid var(--primary);
+  word-break: break-word;
+}
 
 @media(max-width: 850px)
 {
@@ -130,17 +143,32 @@ tbody
     content: attr(data-cell);
     text-transform: capitalize;
     font-weight: bold;
+    background-color: var(--primary);
+    margin-inline-end: .5rem;
+    padding: .3rem;
   }
 
   td
   {
     display: grid;
     grid-template-columns: 12ch auto;
-    padding: .3rem;
+    border: none; 
+    padding: 0px;
   }
 
   td:last-child
   {
-    padding-block-end: 2rem;
+    border-bottom: 2px solid var(--primary);
+    padding-block-end: .6rem;
+    margin-block-end: .3rem;
+  }
+
+  tr:last-child td
+  {
+
+    border-bottom: none;
+    padding-block-end: 0px;
+    margin-block-end: 0px;
+    
   }
 }
