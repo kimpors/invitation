@@ -1,9 +1,30 @@
-.thanks
+:root
 {
-  margin: 0;
+  --text: black;
+  --background: hsl(200, 50%, 90%);
+
+  --primary: hsl(200, 70%, 80%);
+  --secondary: hsl(10, 20%, 30%);
+  --accent: hsl(200, 50%, 90%);
 }
 
-.thanks .link
+.thanks
 {
-  width: fit-content;
+  height: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--primary);
+  box-shadow: 10px 10px var(--secondary);
+  margin: 7rem;
+  padding: 5rem;
+
+  border-radius: 10px;
+}
+
+.return
+{
+  color: var(--secondary);
 }

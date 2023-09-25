@@ -1,19 +1,20 @@
 @model bool
 
-<article class="center thanks">
+<article class="thanks">
   <h1>Thank you</h1>
-  @if (Model)
-  {
-    <p>
-      We will inform you about time to come up
-    </p>
-  }
-  else
-  {
-    <p>
-      Bad, but next time you need to come up!!!
-    </p>
-  }
 
-  <a class="link" asp-action="Index">Return</a>
+    @if (Model)
+    {
+      <p>
+        We will inform you about time to come up
+      </p>
+    }
+    else
+    {
+      <p>
+        Bad, but next time you need to come up!!!
+      </p>
+    }
+
+    <a class="return" asp-action="Index">Return</a>
 </article>

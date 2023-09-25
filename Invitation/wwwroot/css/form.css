@@ -22,6 +22,17 @@ form
   margin-bottom: 1rem;
   box-shadow: 5px 5px var(--secondary);
   /* margin: .3rem; */
+  transition: box-shadow 150ms ease-in;
+}
+
+.form section:focus-within
+{
+  box-shadow: 2px 2px var(--secondary);
+}
+
+section input:focus-within
+{
+  box-shadow: none;
 }
 
 section input
@@ -35,9 +46,13 @@ section input
   border: none;
   box-shadow: 5px 5px var(--secondary);
   background-color: var(--primary);
-
   border-radius: 5px;
+  transition: box-shadow 150ms ease-in;
+}
 
+.submit:active
+{
+  box-shadow: 1px 1px var(--secondary);
 }
 
 .invalid
