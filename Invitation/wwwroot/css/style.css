@@ -3,15 +3,13 @@
   --text: black;
   --background: hsl(200, 50%, 90%);
 
-  --primary: hsl(10, 20%, 30%);
-  --secondary: hsl(30, 70%, 80%);
+  --secondary: hsl(10, 20%, 30%);
   --accent: hsl(200, 50%, 90%);
 
   --info: hsl(200, 70%, 80%);
   --invitation: hsl(200, 50%, 50%);
   --guest-info: hsl(200, 70%, 80%);
   --guests: hsl(200, 50%, 60%);
-
 }
 
 head,
@@ -42,7 +40,6 @@ article
 }
 
 section{
-  background-color: var(--secondary);
   border-radius: 10px;
 }
 
@@ -81,7 +78,7 @@ h1,
 h2
 {
   text-align: center;
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 p

@@ -1,47 +1,47 @@
-.form
+:root
 {
-  margin: 0;
+  --text: black;
+  --background: hsl(200, 50%, 90%);
+
+  --primary: hsl(200, 70%, 80%);
+  --secondary: hsl(30, 70%, 80%);
+  --accent: hsl(200, 50%, 90%);
 }
 
-.form .field
+form
 {
-  margin-top: 2rem;
-
   display: flex;
   flex-direction: column;
-  padding: .8rem;
+  align-items: center;
 }
 
-.form .field label
+section
 {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.form .field input
-{
-  font-size: 1rem;
-  border-style: none;
-  margin-top: .5rem;
-  padding: .4rem;
-  border: 1px solid black;
-}
-
-.form .is-come 
-{
-  height: 25px;
-}
-
-.form .submit {
-  font-size: 1.5rem;
+  background-color: var(--primary);
   padding: 1rem;
-  border-radius: 10px;
-  border-style: none;
+  margin-bottom: 1rem;
+  box-shadow: 5px 5px var(--secondary);
+}
+
+section input
+{
+  border-radius: 5px;
+}
+
+.submit
+{
+  padding: 1rem;
+  border: none;
+  box-shadow: 5px 5px var(--secondary);
+  background-color: var(--primary);
+
+  border-radius: 5px;
+
 }
 
 .invalid
 {
+  font-size: .9rem;
   color: red;
   font-weight: bold;
-
 }

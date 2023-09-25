@@ -2,27 +2,27 @@
 
 <article >
   <form class="center form" asp-controller="Home" asp-action="Form" method="post">
-    <section class="field border">
+    <section class="name">
       <label asp-for="Name"></label>
       <div><span class="invalid" asp-validation-for="Name"></span></div>
       <input asp-for="Name">
     </section>
-    <section class="field border">
+    <section class="lastname">
       <label asp-for="LastName"></label>
       <div><span class="invalid" asp-validation-for="LastName"></span></div>
       <input asp-for="LastName">
     </section>
-    <section class="field border">
+    <section class="phone">
       <label asp-for="Phone"></label>
       <div><span class="invalid" asp-validation-for="Phone"></span></div>
       <input asp-for="Phone">
     </section>
-    <section class="field border">
+    <section class="email">
       <label asp-for="Email"></label>
       <div><span class="invalid" asp-validation-for="Email"></span></div>
       <input asp-for="Email">
     </section>
-    <section class="field">
+    <section class="come">
       <label>Do you Come ?</label>
       <input class="is-come" asp-for="IsComeUp">
     </section>
