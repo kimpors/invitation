@@ -1,9 +1,13 @@
 # Invitation
 
-Simple invitation site.
-
-I use 'Pro ASP Core MVC 2 7th Edition'.
+Invitation site, for development i use book 'Pro ASP Core MVC 2 7th Edition'.
 
 ## Preview
 
-![preview](./Images/Preview.png)  
+![index](./Images/index.png)
+
+
+![form](./Images/form.png)
+
+
+![form](./Images/thanks.png)
