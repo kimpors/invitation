@@ -1,15 +1,16 @@
 :root
 {
-  --text: #111d12;
-  --background: #ddf8eb;
-  --primary: #a1635e;
-  --secondary: #f2b8ab;
-  --accent: #ddf8eb;
+  --text: black;
+  --background: hsl(200, 50%, 90%);
 
-  --info: #83d9ec;
-  --invitation: #1b9ab6;
-  --guest-info: #96b8bc;
-  --guests: #b6e4e7;
+  --primary: hsl(10, 20%, 30%);
+  --secondary: hsl(30, 70%, 80%);
+  --accent: hsl(200, 50%, 90%);
+
+  --info: hsl(200, 70%, 80%);
+  --invitation: hsl(200, 50%, 50%);
+  --guest-info: hsl(200, 70%, 80%);
+  --guests: hsl(200, 50%, 60%);
 
 }
 
