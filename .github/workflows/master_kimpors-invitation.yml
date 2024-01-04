@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'kimpors-invitation'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3C9A893154C040178BD082B87E89BA54 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E21E814BCB8D4E7AA4ABAA25E6F062CC }}
           package: .
