@@ -1,39 +1,38 @@
+using Microsoft.AspNetCore.Mvc;
 using Invitation.Models;
 using Invitation.Data;
-
-using Microsoft.AspNetCore.Mvc;
 
 namespace Invitation.Controllers;
 
 public class HomeController : Controller
 {
-  private IInviteRepository _repo;
+	private IInviteRepository _repo;
 
-  public HomeController(IInviteRepository repo)
-    => _repo = repo;
+	public HomeController(IInviteRepository repo)
+		=> _repo = repo;
 
-  public ViewResult Index()
-    => View(_repo.Invites.Where(u => u.IsComeUp));
+    public IActionResult Index()
+		=> View(_repo.Invites.Where(u => u.WillAttend));
 
-  public ViewResult Form()
-    => View(new Invite(){
-        Name = "",
-        LastName = "",
-        Email = "",
-        Phone = ""});
+	public IActionResult Form()
+		=> View(new Invite() {
+			Name = "",
+			LastName = "",
+			Email = "",
+			Phone = ""});
 
-  [HttpPost]
-  public IActionResult Form(Invite invite)
-  {
-    if (ModelState.IsValid)
-    {
-      _repo.SaveInvite(invite);
-      return View(nameof(Thanks), invite.IsComeUp);
-    }
+	[HttpPost]
+	public IActionResult Form(Invite invite)
+	{
+		if (ModelState.IsValid)
+		{
+			_repo.Add(invite);
+			return View(nameof(Thanks), invite.WillAttend);
+		}
 
-    return View(invite);
-  }
+		return View(invite);
+	}
 
-  public ViewResult Thanks(bool isComeUp)
-    => View(isComeUp);
+	public IActionResult Thanks(bool WillAttend)
+		=> View(WillAttend);
 }

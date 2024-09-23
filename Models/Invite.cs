@@ -18,5 +18,5 @@ public class Invite
   [Required(ErrorMessage = "Please, enter the email")]
   public required string Email { get; set; }
 
-  public bool IsComeUp { get; set; }
+  public bool WillAttend { get; set; }
 }
